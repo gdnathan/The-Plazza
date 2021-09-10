@@ -1,0 +1,8 @@
+build/
+compile_commands.json
+plazza
+tags
+.cache
+*.gc*
+vgcore*
+.vscode

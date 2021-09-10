@@ -1,0 +1,17 @@
+name: C/C++ CI
+
+on: [push]
+
+jobs:
+  test:
+    container:
+      image: docker://srzzumix/googletest:latest
+    runs-on: ubuntu-latest
+    continue-on-error: true
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Compile
+        run: make
+      - name: Run tests
+        run: make tests_run
